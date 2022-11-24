@@ -1,0 +1,64 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="cliente">
+      <h2 data-cy="clienteDetailsHeading"><span jhiTranslate="pruebaNttApp.cliente.detail.title">Cliente</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ cliente.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="pruebaNttApp.cliente.primerNombre">Primer Nombre</span></dt>
+        <dd>
+          <span>{{ cliente.primerNombre }}</span>
+        </dd>
+        <dt><span jhiTranslate="pruebaNttApp.cliente.segundoNombre">Segundo Nombre</span></dt>
+        <dd>
+          <span>{{ cliente.segundoNombre }}</span>
+        </dd>
+        <dt><span jhiTranslate="pruebaNttApp.cliente.primerApellido">Primer Apellido</span></dt>
+        <dd>
+          <span>{{ cliente.primerApellido }}</span>
+        </dd>
+        <dt><span jhiTranslate="pruebaNttApp.cliente.segundoApellido">Segundo Apellido</span></dt>
+        <dd>
+          <span>{{ cliente.segundoApellido }}</span>
+        </dd>
+        <dt><span jhiTranslate="pruebaNttApp.cliente.telefono">Telefono</span></dt>
+        <dd>
+          <span>{{ cliente.telefono }}</span>
+        </dd>
+        <dt><span jhiTranslate="pruebaNttApp.cliente.direccion">Direccion</span></dt>
+        <dd>
+          <span>{{ cliente.direccion }}</span>
+        </dd>
+        <dt><span jhiTranslate="pruebaNttApp.cliente.ciudadResidencia">Ciudad Residencia</span></dt>
+        <dd>
+          <span>{{ cliente.ciudadResidencia }}</span>
+        </dd>
+        <dt><span jhiTranslate="pruebaNttApp.cliente.cedulaCiudadania">Cedula Ciudadania</span></dt>
+        <dd>
+          <span>{{ cliente.cedulaCiudadania }}</span>
+        </dd>
+        <dt><span jhiTranslate="pruebaNttApp.cliente.tipoIdentificacion">Tipo Identificacion</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'pruebaNttApp.TipoIdenficacion.' + cliente.tipoIdentificacion }}">{{ cliente.tipoIdentificacion }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/cliente', cliente.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

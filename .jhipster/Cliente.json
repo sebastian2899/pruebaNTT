@@ -1,0 +1,53 @@
+{
+  "applications": "*",
+  "changelogDate": "20221123020848",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "cliente",
+  "fields": [
+    {
+      "fieldName": "primerNombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "segundoNombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "primerApellido",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "segundoApellido",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telefono",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "direccion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ciudadResidencia",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cedulaCiudadania",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "tipoIdentificacion",
+      "fieldType": "TipoIdenficacion",
+      "fieldValues": "CEDULA_CIUDADANIA,PASAPORTE"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Cliente",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}
